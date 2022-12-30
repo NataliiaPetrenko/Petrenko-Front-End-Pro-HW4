@@ -9,10 +9,7 @@ function isNumber (number) {
     return typeof number === 'number' && !isNaN(number);
 }
 
-while (!(userAction === actionAdd || 
-    userAction === actionSub || 
-    userAction === actionMult || 
-    userAction === actionDiv)) {
+while (!(userAction === actionAdd || userAction === actionSub || userAction === actionMult || userAction === actionDiv)) {
     userAction = prompt(`What kind of action you'd like to do? (only: ${actionAdd}, ${actionSub}, ${actionMult}, ${actionDiv})`);
 }
 
