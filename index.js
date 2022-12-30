@@ -5,19 +5,26 @@ const actionDiv = 'div';
 
 let userAction = prompt(`What kind of action you'd like to do? (only: ${actionAdd}, ${actionSub}, ${actionMult}, ${actionDiv})`);
 
-while (!(userAction === actionAdd || userAction === actionSub || userAction === actionMult || userAction === actionDiv)) {
+function isNumber (number) {
+    return typeof number === 'number' && !isNaN(number);
+}
+
+while (!(userAction === actionAdd || 
+    userAction === actionSub || 
+    userAction === actionMult || 
+    userAction === actionDiv)) {
     userAction = prompt(`What kind of action you'd like to do? (only: ${actionAdd}, ${actionSub}, ${actionMult}, ${actionDiv})`);
 }
 
 let firstNumber = Number(prompt("Kindly enter the first number: "));
 
-while (!(Number(firstNumber))) {
+while (!(isNumber(firstNumber))) {
     firstNumber = Number(prompt("Kindly enter the first number: "));
 }
 
 let secondNumber = Number(prompt("Kindly enter the second number: "));
 
-while (!(Number(secondNumber))) {
+while (!(isNumber(secondNumber))) {
     secondNumber = Number(prompt("Kindly enter the second number: "));
 }
 
